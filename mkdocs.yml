@@ -1,0 +1,73 @@
+site_name: NFeWizard
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      accent: purple
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      accent: purple 
+  dark_mode: true 
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/nfewizard
+    - icon: fontawesome/solid/hand-holding-dollar
+      link: https://github.com/sponsors/nfewizard/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/maurelima/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - css/extra.css
+
+nav:
+  - Home: index.md
+  - Configuração de Ambiente: configuracaoDeAmbiente.md
+  - Documentação:
+      - Inicializar Ambiente: nfeInicializarAmbiente.md
+      - Uso Indevido: nfeUsoIndevido.md
+      - NFeStatus Servico: nfeStatusServico.md
+      - NFeConsulta Protocolo: nfeConsultaProtocolo.md
+      - NFeDistribuicaoDFe: nfeDistribuicaoDfe.md
+      - NFeInutilizacao: nfeInutilizacao.md
+      - NFeRecepcaoEvento: nfeRecepcaoEvento.md
+      - NFeAutorizacao: nfeAutorizacao.md
+      - NFeGerarDanfe: nfeGerarDanfe.md
+      - NFeEnviaEmail: nfeEnviaEmail.md
+
+
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/nfewizard"  target="_blank" rel="noopener">NFeWizard</a>
