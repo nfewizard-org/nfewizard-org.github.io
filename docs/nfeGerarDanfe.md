@@ -1,7 +1,7 @@
 # NFeGerarDanfe
 
 !!! Quote ""
-    `Função`: Método destinado gerar DANFE com base num objeto do tipo NFe | NFeDanfe.<br>
+    `Função`: Método destinado à gerar DANFE com base num objeto do tipo NFe | NFeDanfe.<br>
     `Processo`: assíncrono.
 <br>
 
