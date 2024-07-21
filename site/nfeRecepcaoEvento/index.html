@@ -1,0 +1,2222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../nfeInutilizacao/">
+      
+      
+        <link rel="next" href="../nfeAutorizacao/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>NFeRecepcaoEvento - NFeWizard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nferecepcaoevento" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NFeWizard" class="md-header__button md-logo" aria-label="NFeWizard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NFeWizard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NFeRecepcaoEvento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NFeWizard" class="md-nav__button md-logo" aria-label="NFeWizard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NFeWizard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracaoDeAmbiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuração de Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Documentação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeInicializarAmbiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicializar Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeUsoIndevido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uso Indevido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeStatusServico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeStatus Servico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeConsultaProtocolo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeConsulta Protocolo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeDistribuicaoDfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeDistribuicaoDFe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeInutilizacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeInutilizacao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NFeRecepcaoEvento
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NFeRecepcaoEvento
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_recepcaoevento" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_RecepcaoEvento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_cienciadaoperacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_CienciaDaOperacao
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_confirmacaodaoperacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_ConfirmacaoDaOperacao
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_cartadecorrecao" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_CartaDeCorrecao
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_cancelamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_Cancelamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_desconhecimentodaoperacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_DesconhecimentoDaOperacao
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_operacaonaorealizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_OperacaoNaoRealizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nfe_eventopreviodeemissaoemcontingencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFE_EventoPrevioDeEmissaoEmContingencia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeAutorizacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeAutorizacao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeGerarDanfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeGerarDanfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfeEnviaEmail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFeEnviaEmail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nferecepcaoevento">NFeRecepcaoEvento</h1>
+<div class="admonition quote">
+<p><code>Função</code>: Serviço destinado à recepção de mensagem de Evento da NF-e.<br>
+<code>Processo</code>: síncrono.<br>
+<code>Método</code>: nfeRecepcaoEvento</p>
+</div>
+<p><br></p>
+<p>O Método NFE_RecepcaoEvento pode receber um objeto que possua até 20 eventos e atende qualquer um dos tipos de eventos listados abaixo:</p>
+<ul>
+<li><code>210210</code>: Ciência da Operação.</li>
+<li><code>210200</code>: Confirmação da Operação.</li>
+<li><code>110110</code>: Carta de Correção.</li>
+<li><code>110111</code>: Cancelamento.</li>
+<li><code>210220</code>: Desconhecimento da Operação.</li>
+<li><code>210240</code>: Operação Não Realizada.</li>
+<li><code>110140</code>: EPEC (Evento Prévio de Emissão em Contingência).
+<br><br></li>
+</ul>
+<details class="quote">
+<summary>Interface de Entrada</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Código do órgão de recepção do Evento, conforme Tabela do IBGE ou: 91=Ambiente Nacional. Informar o código da UF para este evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação;</td>
+</tr>
+<tr>
+<td><code>CNPJ</code></td>
+<td>String</td>
+<td>CNPJ do autor do evento</td>
+</tr>
+<tr>
+<td><code>CPF</code></td>
+<td>String</td>
+<td>CPF do autor do evento</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento será vinculado</td>
+</tr>
+<tr>
+<td><code>dhEvento</code></td>
+<td>String</td>
+<td>Data e hora do evento no formato AAAA-MM-DD-Thh:m m:ssTZD (UTC – Universal Coordinated Time)</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento (de acordo com tabelas do item 3.1)</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>verEvento</code></td>
+<td>String</td>
+<td>Versão do grupo de detalhe do evento.</td>
+</tr>
+<tr>
+<td><code>descEvento</code></td>
+<td>String</td>
+<td>Informar a descrição do evento.</td>
+</tr>
+<tr>
+<td><code>xCorrecao</code></td>
+<td>String</td>
+<td>Correção a ser considerada, texto livre. A correção mais recente substitui as anteriores.</td>
+</tr>
+<tr>
+<td><code>xCondUso</code></td>
+<td>String</td>
+<td>Condições de uso da Carta de Correção, informar a literal : “A Carta de Correção é disciplinada pelo § 1º-A do art. 7º do Convênio S/N, de 15 de dezembro de 1970 e pode ser utilizada para regularização de erro ocorrido na emissão de documento fiscal, desde que o erro não esteja relacionado com: I - as variáveis que determinam o valor do imposto tais como: base de cálculo, alíquota, diferença de preço, quantidade, valor da operação ou da prestação; II - a correção de dados cadastrais que implique mudança do remetente ou do destinatário; III - a data de emissão ou de saída.” (texto com acentuação) ou “A Carta de Correcao e disciplinada pelo paragrafo 1o-A do art. 7o do Convenio S/N, de 15 de dezembro de 1970 e pode ser utilizada para regularizacao de erro ocorrido na emissao de documento fiscal, desde que o erro nao esteja relacionado com: I - as variaveis que determinam o valor do imposto tais como: base de calculo, aliquota, diferenca de preco, quantidade, valor da operacao ou da prestacao; II - a correcao de dados cadastrais que implique mudanca do remetente ou do destinatario; III - a data de emissao ou de saida.” (texto sem acentuação)</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>String</td>
+<td>Informar o número do Protocolo de Autorização da NFe.</td>
+</tr>
+<tr>
+<td><code>xJust</code></td>
+<td>String</td>
+<td>Informar a justificativa.</td>
+</tr>
+<tr>
+<td><code>cOrgaoAutor</code></td>
+<td>Number</td>
+<td>Código do Órgão do Autor do Evento.Nota: Informar o código da UF do Emitente para este evento.</td>
+</tr>
+<tr>
+<td><code>tpAutor</code></td>
+<td>String</td>
+<td>Informar "1=Empresa Emitente/Pessoa Física" para este evento.(NT 2018.004) Nota: 1=Empresa Emitente; 2=Empresa Destinatária; 3=Empresa; 5=Fisco; 6=RFB; 9=Outros Órgãos.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>VVersão do aplicativo do Autor do Evento.</td>
+</tr>
+<tr>
+<td><code>dhEmi</code></td>
+<td>String</td>
+<td>Data e hora no formato UTC (Universal Coordinated Time): "AAAA-MM-DDThh:m m:ss TZD"</td>
+</tr>
+<tr>
+<td><code>tpNF</code></td>
+<td>Number</td>
+<td>0- Entrada 1- Saída</td>
+</tr>
+<tr>
+<td><code>IE</code></td>
+<td>String</td>
+<td>Inscrição Estadual</td>
+</tr>
+<tr>
+<td><code>UF</code></td>
+<td>String</td>
+<td>Sigla da UF do destinatário. Informar “EX” no caso de operação com o exterior.</td>
+</tr>
+<tr>
+<td><code>vNF</code></td>
+<td>String</td>
+<td>Valor total da NF-e.</td>
+</tr>
+<tr>
+<td><code>vICMS</code></td>
+<td>String</td>
+<td>Valor total do ICMS.</td>
+</tr>
+<tr>
+<td><code>vST</code></td>
+<td>String</td>
+<td>Valor total do ICMS Substituição Tributária.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="nfe_recepcaoevento"><code>NFE_RecepcaoEvento</code></h4>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_RecepcaoEvento</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-0-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-0-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-0-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-0-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-0-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-0-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-0-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-0-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-0-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-0-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-0-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-0-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-0-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-0-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-0-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-0-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-0-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-0-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-0-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-0-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-0-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-0-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-0-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-0-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-0-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-0-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-0-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-0-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-0-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-0-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-0-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-0-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-0-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-0-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-0-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-0-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-0-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-0-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-0-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-0-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-0-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-0-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-0-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-0-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-0-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-0-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-0-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-0-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-0-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-0-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-0-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-0-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-0-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-0-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-0-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-0-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-0-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-0-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-0-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-0-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-0-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-0-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-0-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-0-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-0-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-0-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-0-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-0-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-0-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-0-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-0-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-0-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-0-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-0-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-0-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-0-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-0-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-0-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-0-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-0-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-0-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-0-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-0-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span>
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
+<span class="normal"><a href="#__codelineno-0-111">111</a></span>
+<span class="normal"><a href="#__codelineno-0-112">112</a></span>
+<span class="normal"><a href="#__codelineno-0-113">113</a></span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span>
+<span class="normal"><a href="#__codelineno-0-115">115</a></span>
+<span class="normal"><a href="#__codelineno-0-116">116</a></span>
+<span class="normal"><a href="#__codelineno-0-117">117</a></span>
+<span class="normal"><a href="#__codelineno-0-118">118</a></span>
+<span class="normal"><a href="#__codelineno-0-119">119</a></span>
+<span class="normal"><a href="#__codelineno-0-120">120</a></span>
+<span class="normal"><a href="#__codelineno-0-121">121</a></span>
+<span class="normal"><a href="#__codelineno-0-122">122</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">EventoNFe</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="kt">EventoNFe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="c1">// O método aceita até 20 eventos por lote</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210210&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Ciencia da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210200&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Confirmacao da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110110&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Carta de Correção&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">                </span><span class="nx">xCorrecao</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Teste de homologação&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">                </span><span class="nx">xCondUso</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;A Carta de Correcao e disciplinada pelo paragrafo 1o-A do art. 7o do Convenio S/N, de 15 de dezembro de 1970 e pode ser utilizada para regularizacao de erro ocorrido na emissao de documento fiscal, desde que o erro nao esteja relacionado com: I - as variaveis que determinam o valor do imposto tais como: base de calculo, aliquota, diferenca de preco, quantidade, valor da operacao ou da prestacao; II - a correcao de dados cadastrais que implique mudanca do remetente ou do destinatario; III - a data de emissao ou de saida.&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110111&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cancelamento&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">                </span><span class="nx">nProt</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">                </span><span class="nx">xJust</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cancelamento homologacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210220&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Desconhecimento da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210240&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Operacao nao Realizada&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="w">                </span><span class="nx">xJust</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Teste Operacao nao Realizada em homologação&#39;</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110140&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;EPEC&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="w">                </span><span class="nx">cOrgaoAutor</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="w">                </span><span class="nx">tpAutor</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="w">                </span><span class="nx">verAplic</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="w">                </span><span class="nx">dhEmi</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2024-07-10T09:38:55-03:00&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a><span class="w">                </span><span class="nx">tpNF</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a><span class="w">                </span><span class="nx">IE</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="w">                </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="w">                    </span><span class="nx">UF</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SP&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="w">                    </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="w">                    </span><span class="nx">IE</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="w">                    </span><span class="nx">vNF</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-113" name="__codelineno-0-113"></a><span class="w">                    </span><span class="nx">vICMS</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a><span class="w">                    </span><span class="nx">vST</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-116" name="__codelineno-0-116"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-117" name="__codelineno-0-117"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-118" name="__codelineno-0-118"></a>
+<a id="__codelineno-0-119" name="__codelineno-0-119"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-0-120" name="__codelineno-0-120"></a><span class="p">}</span>
+<a id="__codelineno-0-121" name="__codelineno-0-121"></a>
+<a id="__codelineno-0-122" name="__codelineno-0-122"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_RecepcaoEvento</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<br>
+Também é possível utilizar o método especifico para cada tipo de evento:
+<br><br></p>
+<hr />
+<!-- #### `NFE_CienciaDaOperacao` -->
+<h4 id="nfe_cienciadaoperacao"><code style="color: blue;">NFE_CienciaDaOperacao</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_CienciaDaOperacao</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CienciaDaOperacao</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cienciaDaOperacao</span><span class="o">:</span><span class="w"> </span><span class="kt">CienciaDaOperacao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210210&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Ciencia da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_CienciaDaOperacao</span><span class="p">(</span><span class="nx">cienciaDaOperacao</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de evento processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210210&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ciencia da Operacao&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T15:32:48-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeRecepcaoEventoNFResult xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de evento processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;573&lt;/cStat&gt;&lt;xMotivo&gt;Rejeicao: Duplicidade de evento&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;210210&lt;/tpEvento&gt;&lt;xEvento&gt;Ciencia da Operacao&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;dhRegEvento&gt;2024-07-17T15:32:48-03:00&lt;/dhRegEvento&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeRecepcaoEventoNFResult&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_confirmacaodaoperacao"><code>NFE_ConfirmacaoDaOperacao</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_ConfirmacaoDaOperacao</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ConfirmacaoDaOperacao</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">confirmacaoDaOperacao</span><span class="o">:</span><span class="w"> </span><span class="kt">ConfirmacaoDaOperacao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210200&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Confirmacao da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">}</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_ConfirmacaoDaOperacao</span><span class="p">(</span><span class="nx">confirmacaoDaOperacao</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de evento processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210200&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Confirmacao da Operacao&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T15:48:45-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeRecepcaoEventoNFResult xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de evento processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento Id=\&quot;ID999999999999999\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;136&lt;/cStat&gt;&lt;xMotivo&gt;Evento registrado, mas nao vinculado a NF-e&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;210200&lt;/tpEvento&gt;&lt;xEvento&gt;Confirmacao da Operacao&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;CNPJDest&gt;99999999999999&lt;/CNPJDest&gt;&lt;dhRegEvento&gt;2024-07-17T15:48:45-03:00&lt;/dhRegEvento&gt;&lt;nProt&gt;999999999999999&lt;/nProt&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeRecepcaoEventoNFResult&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_cartadecorrecao"><code>NFE_CartaDeCorrecao</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_CartaDeCorrecao</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CartaDeCorrecao</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cartaDeCorrecao</span><span class="o">:</span><span class="w"> </span><span class="kt">CartaDeCorrecao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110110&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Carta de Correção&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">                </span><span class="nx">xCorrecao</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Teste de homologação&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">                </span><span class="nx">xCondUso</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;A Carta de Correcao e disciplinada pelo paragrafo 1o-A do art. 7o do Convenio S/N, de 15 de dezembro de 1970 e pode ser utilizada para regularizacao de erro ocorrido na emissao de documento fiscal, desde que o erro nao esteja relacionado com: I - as variaveis que determinam o valor do imposto tais como: base de calculo, aliquota, diferenca de preco, quantidade, valor da operacao ou da prestacao; II - a correcao de dados cadastrais que implique mudanca do remetente ou do destinatario; III - a data de emissao ou de saida.&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="p">}</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_CartaDeCorrecao</span><span class="p">(</span><span class="nx">cartaDeCorrecao</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">[</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SP_EVENTOS_PL_100&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de Evento Processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SP_EVENTOS_PL_100&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;110110&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Carta de Correção registrada&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T15:58:10-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeResultMsg xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;SP_EVENTOS_PL_100&lt;/verAplic&gt;&lt;cOrgao&gt;35&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de Evento Processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;SP_EVENTOS_PL_100&lt;/verAplic&gt;&lt;cOrgao&gt;35&lt;/cOrgao&gt;&lt;cStat&gt;135&lt;/cStat&gt;&lt;xMotivo&gt;Evento registrado e vinculado a NF-e&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;110110&lt;/tpEvento&gt;&lt;xEvento&gt;Carta de Correção registrada&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;CNPJDest&gt;99999999999999&lt;/CNPJDest&gt;&lt;dhRegEvento&gt;2024-07-17T15:58:10-03:00&lt;/dhRegEvento&gt;&lt;nProt&gt;999999999999999&lt;/nProt&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeResultMsg&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_cancelamento"><code>NFE_Cancelamento</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_Cancelamento</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Cancelamento</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cancelamento</span><span class="o">:</span><span class="w"> </span><span class="kt">Cancelamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110111&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cancelamento&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">                </span><span class="nx">nProt</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">                </span><span class="nx">xJust</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cancelamento homologacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_Cancelamento</span><span class="p">(</span><span class="nx">cancelamento</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">[</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SP_EVENTOS_PL_100&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de Evento Processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SP_EVENTOS_PL_100&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;110111&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cancelamento registrado&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T17:37:52-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeResultMsg xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;SP_EVENTOS_PL_100&lt;/verAplic&gt;&lt;cOrgao&gt;35&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de Evento Processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;SP_EVENTOS_PL_100&lt;/verAplic&gt;&lt;cOrgao&gt;35&lt;/cOrgao&gt;&lt;cStat&gt;135&lt;/cStat&gt;&lt;xMotivo&gt;Evento registrado e vinculado a NF-e&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;110111&lt;/tpEvento&gt;&lt;xEvento&gt;Cancelamento registrado&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;CNPJDest&gt;99999999999999&lt;/CNPJDest&gt;&lt;dhRegEvento&gt;2024-07-17T17:37:52-03:00&lt;/dhRegEvento&gt;&lt;nProt&gt;999999999999999&lt;/nProt&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeResultMsg&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_desconhecimentodaoperacao"><code>NFE_DesconhecimentoDaOperacao</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_DesconhecimentoDaOperacao</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DesconhecimentoDaOperacao</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">desconhecimentoDaOperacao</span><span class="o">:</span><span class="w"> </span><span class="kt">DesconhecimentoDaOperacao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210220&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Desconhecimento da Operacao&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_DesconhecimentoDaOperacao</span><span class="p">(</span><span class="nx">desconhecimentoDaOperacao</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">[</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de evento processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210220&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Desconhecimento da Operacao&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T17:23:39-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeRecepcaoEventoNFResult xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de evento processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento Id=\&quot;ID891240002367854\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;135&lt;/cStat&gt;&lt;xMotivo&gt;Evento registrado e vinculado a NF-e&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;210220&lt;/tpEvento&gt;&lt;xEvento&gt;Desconhecimento da Operacao&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;CNPJDest&gt;99999999999999&lt;/CNPJDest&gt;&lt;dhRegEvento&gt;2024-07-17T17:23:39-03:00&lt;/dhRegEvento&gt;&lt;nProt&gt;891240002367854&lt;/nProt&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeRecepcaoEventoNFResult&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_operacaonaorealizada"><code>NFE_OperacaoNaoRealizada</code></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_OperacaoNaoRealizada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">OperacaoNaoRealizada</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">operacaoNaoRealizada</span><span class="o">:</span><span class="w"> </span><span class="kt">OperacaoNaoRealizada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;210240&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Operacao nao Realizada&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">                </span><span class="nx">xJust</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Teste Operacao nao Realizada em homologação&#39;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="p">}</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_OperacaoNaoRealizada</span><span class="p">(</span><span class="nx">operacaoNaoRealizada</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>Retorno</code>:</p>
+<details class="quote">
+<summary>Interface de Retorno</summary>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idLote</code></td>
+<td>Number</td>
+<td>Identificador de controle do Lote de envio do Evento.</td>
+</tr>
+<tr>
+<td><code>tpAmb</code></td>
+<td>Number</td>
+<td>Identificação do Ambiente: 1- Produção; 2- Homologação.</td>
+</tr>
+<tr>
+<td><code>verAplic</code></td>
+<td>String</td>
+<td>Versão da aplicação que processou o evento.</td>
+</tr>
+<tr>
+<td><code>cOrgao</code></td>
+<td>Number</td>
+<td>Órgão de recepção do Evento, idem a mensagem de entrada.</td>
+</tr>
+<tr>
+<td><code>cStat</code></td>
+<td>Number</td>
+<td>Código do status da resposta.</td>
+</tr>
+<tr>
+<td><code>xMotivo</code></td>
+<td>String</td>
+<td>Descrição do status da resposta.</td>
+</tr>
+<tr>
+<td><code>chNFe</code></td>
+<td>String</td>
+<td>Chave de Acesso da NF-e à qual o evento foi vinculado</td>
+</tr>
+<tr>
+<td><code>tpEvento</code></td>
+<td>String</td>
+<td>Código do evento.</td>
+</tr>
+<tr>
+<td><code>xEvento</code></td>
+<td>String</td>
+<td>Descrição do evento.</td>
+</tr>
+<tr>
+<td><code>nSeqEvento</code></td>
+<td>Number</td>
+<td>Sequencial do evento para o mesmo tipo de evento.</td>
+</tr>
+<tr>
+<td><code>CNPJDest</code></td>
+<td>Number</td>
+<td>CNPJ do destinatário da NF-e.</td>
+</tr>
+<tr>
+<td><code>dhRegEvento</code></td>
+<td>String</td>
+<td>Data e hora do registro do evento no formato AAAAMMDDThh:m m:ssTZD (UTC – Universal Coordinated Time).Se o evento for rejeitado informar a data e hora de recebimento do evento.</td>
+</tr>
+<tr>
+<td><code>nProt</code></td>
+<td>Number</td>
+<td>Número do Protocolo do Evento.</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>String</td>
+<td>Retorno original da SEFAZ (XML) convertido para String.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">[</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">&quot;idLote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;128&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lote de evento processado&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="nt">&quot;retEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="nt">&quot;infEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="nt">&quot;tpAmb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">        </span><span class="nt">&quot;verAplic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AN_1.8.4&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">        </span><span class="nt">&quot;cOrgao&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;91&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="nt">&quot;cStat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;135&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">        </span><span class="nt">&quot;xMotivo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Evento registrado e vinculado a NF-e&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">        </span><span class="nt">&quot;chNFe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999999999999999999999999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">        </span><span class="nt">&quot;tpEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210240&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">        </span><span class="nt">&quot;xEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Operacao nao Realizada&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">        </span><span class="nt">&quot;nSeqEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">        </span><span class="nt">&quot;CNPJDest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99999999999999&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">        </span><span class="nt">&quot;dhRegEvento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-17T17:35:55-03:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">        </span><span class="nt">&quot;nProt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999999999999&quot;</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">    </span><span class="nt">&quot;xml&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot;&gt;&lt;soap:Body&gt;&lt;nfeRecepcaoEventoNFResult xmlns=\&quot;http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4\&quot;&gt;&lt;retEnvEvento versao=\&quot;1.00\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;idLote&gt;1&lt;/idLote&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;128&lt;/cStat&gt;&lt;xMotivo&gt;Lote de evento processado&lt;/xMotivo&gt;&lt;retEvento versao=\&quot;1.00\&quot;&gt;&lt;infEvento Id=\&quot;ID999999999999999\&quot; xmlns=\&quot;http://www.portalfiscal.inf.br/nfe\&quot;&gt;&lt;tpAmb&gt;2&lt;/tpAmb&gt;&lt;verAplic&gt;AN_1.8.4&lt;/verAplic&gt;&lt;cOrgao&gt;91&lt;/cOrgao&gt;&lt;cStat&gt;135&lt;/cStat&gt;&lt;xMotivo&gt;Evento registrado e vinculado a NF-e&lt;/xMotivo&gt;&lt;chNFe&gt;99999999999999999999999999999999999999999999&lt;/chNFe&gt;&lt;tpEvento&gt;210240&lt;/tpEvento&gt;&lt;xEvento&gt;Operacao nao Realizada&lt;/xEvento&gt;&lt;nSeqEvento&gt;1&lt;/nSeqEvento&gt;&lt;CNPJDest&gt;99999999999999&lt;/CNPJDest&gt;&lt;dhRegEvento&gt;2024-07-17T17:35:55-03:00&lt;/dhRegEvento&gt;&lt;nProt&gt;999999999999999&lt;/nProt&gt;&lt;/infEvento&gt;&lt;/retEvento&gt;&lt;/retEnvEvento&gt;&lt;/nfeRecepcaoEventoNFResult&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="p">]</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h4 id="nfe_eventopreviodeemissaoemcontingencia"><code>NFE_EventoPrevioDeEmissaoEmContingencia</code></h4>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">NFE_EventoPrevioDeEmissaoEmContingencia</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">EPEC</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@Protocols&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">epec</span><span class="o">:</span><span class="w"> </span><span class="kt">EPEC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="nx">idLote</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="nx">evento</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">            </span><span class="nx">tpAmb</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">            </span><span class="nx">cOrgao</span><span class="o">:</span><span class="w"> </span><span class="kt">91</span><span class="p">,</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">            </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">            </span><span class="nx">chNFe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;99999999999999999999999999999999999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">            </span><span class="nx">dhEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">format</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">            </span><span class="nx">tpEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;110140&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">            </span><span class="nx">nSeqEvento</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">            </span><span class="nx">verEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">            </span><span class="nx">detEvento</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">                </span><span class="nx">descEvento</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;EPEC&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">                </span><span class="nx">cOrgaoAutor</span><span class="o">:</span><span class="w"> </span><span class="kt">35</span><span class="p">,</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">                </span><span class="nx">tpAutor</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">                </span><span class="nx">verAplic</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.00&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">                </span><span class="nx">dhEmi</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2024-07-10T09:38:55-03:00&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">                </span><span class="nx">tpNF</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">                </span><span class="nx">IE</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999999999999&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">                </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">                    </span><span class="nx">UF</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SP&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">                    </span><span class="nx">CNPJ</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;88888888888888&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">                    </span><span class="nx">IE</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;888888888888&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">                    </span><span class="nx">vNF</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">                    </span><span class="nx">vICMS</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">                    </span><span class="nx">vST</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;999.99&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a><span class="p">}</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a><span class="k">await</span><span class="w"> </span><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_EventoPrevioDeEmissaoEmContingencia</span><span class="p">(</span><span class="nx">epec</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<br>
+<code>Retorno</code>:</p>
+<p><br>
+Para mais informações sobre o processo consulte <a href="http://moc.sped.fazenda.pr.gov.br/RecepcaoEventoGeral.html"><code>Web Service – NFeRecepcaoEvento – Parte Geral</code></a>.
+<br><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/nfewizard" target="_blank" rel="noopener">NFeWizard</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/nfewizard" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/sponsors/nfewizard/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M312 24v10.5c6.4 1.2 12.6 2.7 18.2 4.2 12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17c-10.9-2.9-21.1-4.9-30.2-5-7.3-.1-14.7 1.7-19.4 4.4-2.1 1.3-3.1 2.4-3.5 3-.3.5-.7 1.2-.7 2.8v.6c.2.2.9 1.2 3.3 2.6 5.8 3.5 14.4 6.2 27.4 10.1l.9.3c11.1 3.3 25.9 7.8 37.9 15.3 13.7 8.6 26.1 22.9 26.4 44.9.3 22.5-11.4 38.9-26.7 48.5-6.7 4.1-13.9 7-21.3 8.8V232c0 13.3-10.7 24-24 24s-24-10.7-24-24v-11.4c-9.5-2.3-18.2-5.3-25.6-7.8-2.1-.7-4.1-1.4-6-2-12.6-4.2-19.4-17.8-15.2-30.4s17.8-19.4 30.4-15.2c2.6.9 5 1.7 7.3 2.5 13.6 4.6 23.4 7.9 33.9 8.3 8 .3 15.1-1.6 19.2-4.1 1.9-1.2 2.8-2.2 3.2-2.9.4-.6.9-1.8.8-4.1v-.2c0-1 0-2.1-4-4.6-5.7-3.6-14.3-6.4-27.1-10.3l-1.9-.6c-10.8-3.2-25-7.5-36.4-14.4-13.5-8.1-26.5-22-26.6-44.1-.1-22.9 12.9-38.6 27.7-47.4 6.4-3.8 13.3-6.4 20.2-8.2V24c0-13.3 10.7-24 24-24s24 10.7 24 24zm256.2 312.3c13.1 17.8 9.3 42.8-8.5 55.9l-126.6 93.3c-23.4 17.2-51.6 26.5-80.7 26.5H32c-17.7 0-32-14.3-32-32v-64c0-17.7 14.3-32 32-32h36.8l44.9-36c22.7-18.2 50.9-28 80-28H352c17.7 0 32 14.3 32 32s-14.3 32-32 32h-80c-8.8 0-16 7.2-16 16s7.2 16 16 16h120.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384h-.9.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/maurelima/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
