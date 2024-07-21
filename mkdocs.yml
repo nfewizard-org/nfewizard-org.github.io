@@ -21,7 +21,6 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       accent: purple 
-  dark_mode: true 
 
 extra:
   social:
@@ -46,8 +45,8 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - css/extra.css
@@ -67,7 +66,5 @@ nav:
       - NFeGerarDanfe: nfeGerarDanfe.md
       - NFeEnviaEmail: nfeEnviaEmail.md
 
-
-
 copyright: |
-  &copy; 2024 <a href="https://github.com/nfewizard"  target="_blank" rel="noopener">NFeWizard</a>
+  &copy; 2024 <a href="https://github.com/nfewizard" target="_blank" rel="noopener">NFeWizard</a>
