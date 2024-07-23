@@ -66,7 +66,6 @@ await nfeWizard.NFE_LoadEnvironment({
             emailParams: {
                 from: '"Seu Nome" <seu-email@example.com>',
                 to: 'destinatario@example.com',
-                subject: 'Assunto do E-mail',
             }
         },
         lib: {
