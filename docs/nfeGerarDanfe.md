@@ -183,7 +183,7 @@ const autorizacao: NFe | NFeDanfe = {
     ],
 };
 
-await nfeWizard.NFE_GerarDanfe({
+await nfewizard.NFE_GerarDanfe({
     chave: '99999999999999999999999999999999999999999999',
     data: {
         NFe: autorizacao.NFe
@@ -216,11 +216,11 @@ const autorizacao: NFeDanfe = {
     NFe: [...],
 };
 
-const retorno = await nfeWizard.NFE_Autorizacao(autorizacao);
+const retorno = await nfewizard.NFE_Autorizacao(autorizacao);
 
 // Gera DANFE da NFe transmitida
 const chave = retorno[0].protNFe.infProt.chNFe;
-await nfeWizard.NFE_GerarDanfe({
+await nfewizard.NFE_GerarDanfe({
     chave,
     data: retorno[0],
     outputPath: 'src/assets/DANFE.pdf'
@@ -259,7 +259,7 @@ const autorizacao: NFeDanfe = {
 
 if (autorizacao.NFe instanceof Array) {
     autorizacao.NFe.forEach(async (NFe: LayoutNFe) => {
-        await nfeWizard.NFE_GerarDanfe({
+        await nfewizard.NFE_GerarDanfe({
             chave: '99999999999999999999999999999999999999999999',
             data: {
                 NFe,
@@ -274,11 +274,11 @@ if (autorizacao.NFe instanceof Array) {
  * Exemplo com NFe já transmitida
 */
 
-const retorno = await nfeWizard.NFE_Autorizacao(autorizacao);
+const retorno = await nfewizard.NFE_Autorizacao(autorizacao);
 
 retorno.forEach(async (NFe) => {
     const chave = NFe.protNFe.infProt.chNFe;
-    await nfeWizard.NFE_GerarDanfe({
+    await nfewizard.NFE_GerarDanfe({
         chave: chave,
         data: NFe,
         outputPath: `src/assets/DANFE-${chave}.pdf`

@@ -1,6 +1,6 @@
 # Inicializar Ambiente
 
-Repositório do projeto [NFeWizard](https://github.com/nfewizard).
+Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizard-io).
 
 !!! Warning ""
     `ATENÇÃO`: Após a inicialização do ambiente você será capaz de utilizar a biblioteca para se comunicar com os webservices da SEFAZ.
@@ -11,13 +11,15 @@ Para mais informações sobre opções de configuração consulte a sessão [`Co
 <br><br>
 
 !!! Quote "Instalação"
-    npm install nfewizard<br>
-    yarn add nfewizard
+    npm install nfewizard-io<br>
+    yarn add nfewizard-io
 
 ```typescript title="NFE_LoadEnvironment" linenums="1"
-const nfeWizard = new NFeWizard();
+import NFeWizard from 'nfewizard-io';
 
-await nfeWizard.NFE_LoadEnvironment({
+const nfewizard = new NFeWizard();
+
+await nfewizard.NFE_LoadEnvironment({
     config: {
         dfe: {
             baixarXMLDistribuicao: true,

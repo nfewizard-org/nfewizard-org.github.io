@@ -1,4 +1,4 @@
-site_name: NFeWizard
+site_name: NFeWizard-io
 theme:
   name: material
   features:
@@ -25,9 +25,9 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/nfewizard
+      link: https://github.com/nfewizard-org/nfewizard-io
     - icon: fontawesome/solid/hand-holding-dollar
-      link: https://github.com/sponsors/nfewizard/
+      link: https://github.com/sponsors/NFeWizard-io/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/maurelima/
 
@@ -67,4 +67,4 @@ nav:
       - NFeEnviaEmail: nfeEnviaEmail.md
 
 copyright: |
-  &copy; 2024 <a href="https://github.com/nfewizard" target="_blank" rel="noopener">NFeWizard</a>
+  &copy; 2024 <a href="https://github.com/nfewizard-org/nfewizard-io" target="_blank" rel="noopener">NFeWizard-io</a>

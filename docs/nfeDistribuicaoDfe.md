@@ -43,7 +43,7 @@ const distribuicao: ConsultaNFe = {
     }
 }
 
-await nfeWizard.NFE_DistribuicaoDFe(distribuicao);
+await nfewizard.NFE_DistribuicaoDFe(distribuicao);
 ```
 <br>
 Também é possível utilizar o método especifico para cada tipo de distribuição:
@@ -65,7 +65,7 @@ const ultimoNSU: DFePorUltimoNSU = {
     },
 }
 
-await nfeWizard.NFE_DistribuicaoDFePorUltNSU(ultimoNSU);
+await nfewizard.NFE_DistribuicaoDFePorUltNSU(ultimoNSU);
 ```
 
 `Retorno`:
@@ -121,7 +121,7 @@ const nsu: DFePorNSU = {
     },
 }
 
-await nfeWizard.NFE_DistribuicaoDFePorNSU(nsu);
+await nfewizard.NFE_DistribuicaoDFePorNSU(nsu);
 ```
 
 `Retorno`:
@@ -169,7 +169,7 @@ const chave: DFePorChaveNFe = {
     },
 }
 
-await nfeWizard.NFE_DistribuicaoDFePorChave(chave);
+await nfewizard.NFE_DistribuicaoDFePorChave(chave);
 ```
 
 `Retorno`:

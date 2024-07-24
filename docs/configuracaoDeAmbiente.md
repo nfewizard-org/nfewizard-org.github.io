@@ -1,6 +1,6 @@
 # Configuração de Ambiente
 
-Repositório do projeto [NFeWizard](https://github.com/nfewizard).
+Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizard-io).
 
 ### DFE
 

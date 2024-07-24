@@ -6,7 +6,7 @@
 <br>
 
 ```typescript title="NFE_EnviaEmail" linenums="1"
-const nfeWizard = new NFeWizard();
+const nfewizard = new NFeWizard();
 
 const messageExample = `
 <!DOCTYPE html>
@@ -105,7 +105,7 @@ const messageExample = `
 </html>
 `;
 
-nfeWizard.NFE_EnviaEmail({
+nfewizard.NFE_EnviaEmail({
     messageExample,
     subject: 'Envio de DANFE e NF-e',
     attachments: [

@@ -1,13 +1,13 @@
 # Home
 
-Repositório do projeto [NFeWizard](https://github.com/nfewizard).
+Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizard-io).
 <div style="height: 200px; display: flex; justify-content: center; align-items: center; width: 200px;">
   <img src="assets/logo.jpg" />
 </div>
 
 ## Sobre
 
-NFeWizard é uma biblioteca Node.js projetada para simplificar a interação com os webservices da SEFAZ, proporcionando uma solução robusta para automação de processos relacionados à Nota Fiscal Eletrônica (NF-e). A biblioteca oferece métodos abrangentes para diversas operações fiscais, incluindo:
+NFeWizard-io é uma biblioteca Node.js projetada para simplificar a interação com os webservices da SEFAZ, proporcionando uma solução robusta para automação de processos relacionados à Nota Fiscal Eletrônica (NF-e). A biblioteca oferece métodos abrangentes para diversas operações fiscais, incluindo:
 
 - **Autorização (Emissão de NFe)**: Submissão de notas fiscais eletrônicas para autorização.
 - **Distribuição DFe**: Consulta e Download de DF-e (Documentos fiscais eletrônicos), facilitando o acesso a documentos fiscais eletrônicos.
@@ -26,17 +26,19 @@ NFeWizard é uma biblioteca Node.js projetada para simplificar a interação com
 
 <br>
 !!! Quote "Instalação"
-    npm install nfewizard<br>
-    yarn add nfewizard
+    npm install nfewizard-io<br>
+    yarn add nfewizard-io
 
 ## Exemplo de Utilização
 
 ```typescript
+import NFeWizard from 'nfewizard-io';
+
 // Instanciar
-const nfeWizard = new NFeWizard();
+const nfewizard = new NFeWizard();
 
 // Inicializar
-await nfeWizard.NFE_LoadEnvironment({
+await nfewizard.NFE_LoadEnvironment({
     config: {
         dfe: {
             baixarXMLDistribuicao: true,
@@ -90,7 +92,7 @@ const chaveNFe: DFePorChaveNFe = {
     },
 }
 
-await nfeWizard.NFE_DistribuicaoDFePorChave(chaveNFe);
+await nfewizard.NFE_DistribuicaoDFePorChave(chaveNFe);
 ```
 
 <!-- ## Documentação
@@ -122,7 +124,7 @@ Primeiramente, obrigado por considerar contribuir para nossa biblioteca! Nosso p
 
 Você pode contribuir através das seguintes plataformas:
 
-- [GitHub Sponsors - Pendente](https://nfewizard-org.github.io/)
+- [GitHub Sponsors - Pendente](https://NFeWizard-org.github.io/)
 - **Pix**: Se preferir doar via Pix, utilize a seguinte chave:
 
     ```
