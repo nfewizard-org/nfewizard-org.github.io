@@ -122,7 +122,7 @@ Primeiramente, obrigado por considerar contribuir para nossa biblioteca! Nosso p
 
 Você pode contribuir através das seguintes plataformas:
 
-- [GitHub Sponsors](https://github.com/sponsors/SeuUsuario)
+- [GitHub Sponsors - Pendente](https://nfewizard-org.github.io/)
 - **Pix**: Se preferir doar via Pix, utilize a seguinte chave:
 
     ```
