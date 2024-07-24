@@ -10,6 +10,10 @@ Repositório do projeto [NFeWizard](https://github.com/nfewizard).
 Para mais informações sobre opções de configuração consulte a sessão [`Configuração de Ambiente`](configuracaoDeAmbiente.md).
 <br><br>
 
+!!! Quote "Instalação"
+    npm install nfewizard<br>
+    yarn add nfewizard
+
 ```typescript title="NFE_LoadEnvironment" linenums="1"
 const nfeWizard = new NFeWizard();
 
