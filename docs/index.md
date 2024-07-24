@@ -24,11 +24,6 @@ NFeWizard é uma biblioteca Node.js projetada para simplificar a interação com
     - Operação Não Realizada
 - **Geração de DANFE**: Criação do Documento Auxiliar da Nota Fiscal Eletrônica (DANFE), um resumo impresso da NFe.
 
-<br>
-!!! Quote "Instalação"
-    npm install nfewizard<br>
-    yarn add nfewizard
-
 ## Exemplo de Utilização
 
 ```typescript
