@@ -63,6 +63,7 @@ nav:
       - NFeInutilizacao: nfeInutilizacao.md
       - NFeRecepcaoEvento: nfeRecepcaoEvento.md
       - NFeAutorizacao: nfeAutorizacao.md
+      - NFCeAutorizacao: nfceAutorizacao.md
       - NFeGerarDanfe: nfeGerarDanfe.md
       - NFeEnviaEmail: nfeEnviaEmail.md
 

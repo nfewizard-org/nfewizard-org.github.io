@@ -1,4 +1,4 @@
-# NFeAutorizacao
+# NFCeAutorizacao
 
 !!! Quote ""
     `Função`: Serviço destinado à recepção de mensagens de lote de NF-e.<br>
@@ -6,20 +6,20 @@
     `Método`: nfeAutorizacaoLote
 <br>
 
-O Método NFE_Autorizacao pode receber um array que possua até 50 NF-e, seguindo definição do [`Leiaute da NF-e`](http://moc.sped.fazenda.pr.gov.br/Leiaute.html).
+O Método NFCE_Autorizacao pode receber um array que possua até 50 NF-e, seguindo definição do [`Leiaute da NF-e`](http://moc.sped.fazenda.pr.gov.br/Leiaute.html).
 <br>
 
 !!! Quote "Interface de Entrada"
     A interface de entrada da NF-e é muito extensa.
     Para consulta-la verifique a documentação em [`Leiaute da NF-e`](http://moc.sped.fazenda.pr.gov.br/Leiaute.html).
 
-#### `NFE_Autorizacao`
+#### `NFCE_Autorizacao`
 
-```typescript title="NFE_Autorizacao" linenums="1"
+```typescript title="NFCE_Autorizacao" linenums="1"
 import { NFe } from '@Protocols';
 
 const autorizacao: NFe = {
-    indSinc: 0,
+    indSinc: 1,
     idLote: 1,
     NFe: [
         {
@@ -28,22 +28,26 @@ const autorizacao: NFe = {
                     cUF: 35,
                     cNF: '99999999',
                     natOp: "VENDA DE MERCADORIA",
-                    mod: 55,
+                    mod: 65,
                     serie: '1',
                     nNF: 999999999,
-                    dhEmi: "2024-07-08T00:00:00-03:00",
+                    dhEmi: "2024-09-02T12:28:02-03:00",
                     tpNF: 1,
                     idDest: 1,
                     cMunFG: 9999999,
-                    tpImp: 1,
+                    tpImp: 4,
                     tpEmis: 1,
                     cDV: 0,
                     tpAmb: 2,
                     finNFe: 1,
                     indFinal: 1,
-                    indPres: 9,
+                    indPres: 1,
                     indIntermed: 0,
                     procEmi: 0,
+                    verProc: '0.1.0',
+                    // Utilize os campos abaixo em caso de contingência
+                    // dhCont: '2024-09-01T13:54:03-03:00',
+                    // xJust: 'Testes de emissão NFCe'
                 },
                 emit: {
                     CNPJCPF: '99999999999999',
@@ -80,25 +84,24 @@ const autorizacao: NFe = {
                         fone: "99999999999"
                     },
                     indIEDest: 1,
-                    IE: "999999999999"
                 },
                 det: [
                     {
                         prod: {
                             cProd: "99999999",
                             cEAN: "9999999999999",
-                            xProd: "QUEIJO MUSSARELA ",
+                            xProd: "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
                             NCM: "99999999",
                             EXTIPI: "00",
                             CFOP: 5102,
-                            uCom: "KG",
-                            qCom: 24.93,
-                            vUnCom: "33.9",
+                            uCom: "UN",
+                            qCom: 1,
+                            vUnCom: "845.13",
                             vProd: "845.13",
                             cEANTrib: "9999999999999",
-                            uTrib: "KG",
-                            qTrib: 24.93,
-                            vUnTrib: "33.9",
+                            uTrib: "UN",
+                            qTrib: 1,
+                            vUnTrib: "845.13",
                             indTot: 1,
                         },
                         imposto: {
@@ -149,16 +152,7 @@ const autorizacao: NFe = {
                     }
                 },
                 transp: {
-                    modFrete: 0,
-                    vol: [
-                        {
-                            qVol: 1,
-                            esp: "CAIXA(S)",
-                            marca: "MARCA",
-                            pesoL: "24.930",
-                            pesoB: "24.930"
-                        }
-                    ]
+                    modFrete: 9,
                 },
                 pag: {
                     detPag: [
@@ -175,7 +169,7 @@ const autorizacao: NFe = {
     ],
 };
 
-await nfewizard.NFE_Autorizacao(autorizacao);
+await nfewizard.NFCE_Autorizacao(autorizacao);
 ```
 <br>
 
@@ -257,14 +251,14 @@ await nfewizard.NFE_Autorizacao(autorizacao);
             "NCM": "04061010",
             "EXTIPI": "00",
             "CFOP": "5102",
-            "uCom": "KG",
+            "uCom": "UN",
             "qCom": "24.93",
-            "vUnCom": "33.9",
+            "vUnCom": "845.13",
             "vProd": "845.13",
             "cEANTrib": "9999999999999",
-            "uTrib": "KG",
-            "qTrib": "24.93",
-            "vUnTrib": "33.9",
+            "uTrib": "UN",
+            "qTrib": "1",
+            "vUnTrib": "845.13",
             "indTot": "1"
           },
           "imposto": {
@@ -314,24 +308,21 @@ await nfewizard.NFE_Autorizacao(autorizacao);
           }
         },
         "transp": {
-          "modFrete": "0",
-          "vol": {
-            "qVol": "1",
-            "esp": "CAIXA(S)",
-            "marca": "MARCA",
-            "pesoL": "24.930",
-            "pesoB": "24.930"
-          }
+          "modFrete": "9",
         },
         "pag": {
-          "detPag": {
-            "indPag": "1",
-            "tPag": "99",
-            "xPag": "Outros",
-            "vPag": "845.13"
-          }
+            "detPag": {
+                "indPag": "1",
+                "tPag": "99",
+                "xPag": "Outros",
+                "vPag": "845.13"
+            }
         }
       },
+      "infNFeSupl": {
+            "qrCode": "https://www.homologacao.nfce.fazenda.sp.gov.br/qrcode?p=...",
+            "urlChave": "https://www.homologacao.nfce.fazenda.sp.gov.br/consulta"
+        },
       "Signature": {
         "SignedInfo": {
           "CanonicalizationMethod": {},
@@ -379,6 +370,6 @@ Para mais informações sobre o processo consulte [`Web Service – NfeAutorizac
 #### Observações
 
 !!! Warning "Atenção"
-    `ATENÇÃO`: O método `NFE_Autorizacao` deve ser utilizado apenas para NFe modelo 55 (NF-e), devendo ser usado o método `NFCE_Autorizacao` para o modelo 65.
+    `ATENÇÃO`: O método `NFCE_Autorizacao` deve ser utilizado apenas para NFe modelo 65 (NFC-e), devendo ser usado o método `NFE_Autorizacao` para o modelo 55.<br>
     
 <br><br>
