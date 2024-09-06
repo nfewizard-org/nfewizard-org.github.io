@@ -42,6 +42,8 @@ await nfewizard.NFE_LoadEnvironment({
         nfe: {
             ambiente: 2,
             versaoDF: "4.00",
+            idCSC: 1,
+            tokenCSC: '99999999-9999-9999-9999-999999999999'
         },
         email: {
             host: 'smtp.example.com',
