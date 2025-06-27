@@ -169,7 +169,7 @@ const autorizacao: NFe = {
     ],
 };
 
-await nfewizard.NFCE_Autorizacao(autorizacao);
+await nfeWizard.NFCE_Autorizacao(autorizacao);
 ```
 <br>
 

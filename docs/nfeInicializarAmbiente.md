@@ -19,50 +19,57 @@ import NFeWizard from 'nfewizard-io';
 
 const nfewizard = new NFeWizard();
 
-await nfewizard.NFE_LoadEnvironment({
-    config: {
-        dfe: {
-            baixarXMLDistribuicao: true,
-            pathXMLDistribuicao: "tmp/DistribuicaoDFe",
-            armazenarXMLAutorizacao: true,
-            pathXMLAutorizacao: "tmp/Autorizacao",
-            armazenarXMLRetorno: true,
-            pathXMLRetorno: "tmp/RequestLogs",
-            armazenarXMLConsulta: true,
-            pathXMLConsulta: "tmp/RequestLogs",
-            armazenarXMLConsultaComTagSoap: false,
-            armazenarRetornoEmJSON: true,
-            pathRetornoEmJSON: "tmp/DistribuicaoDFe",
+await nfeWizard.NFE_LoadEnvironment({
+        config: {
+            dfe: {
+                baixarXMLDistribuicao: true,
+                pathXMLDistribuicao: "tmp/DistribuicaoDFe",
+                armazenarXMLAutorizacao: true,
+                pathXMLAutorizacao: "tmp/Autorizacao",
+                armazenarXMLRetorno: true,
+                pathXMLRetorno: "tmp/RequestLogs",
+                armazenarXMLConsulta: true,
+                pathXMLConsulta: "tmp/RequestLogs",
+                armazenarXMLConsultaComTagSoap: false,
+                armazenarRetornoEmJSON: false,
+                pathRetornoEmJSON: "tmp/DistribuicaoDFe",
 
-            pathCertificado: "certificado.pfx",
-            senhaCertificado: "123456",
-            UF: "SP",
-            CPFCNPJ: "99999999999999",
-        },
-        nfe: {
-            ambiente: 2,
-            versaoDF: "4.00",
-            idCSC: 1,
-            tokenCSC: '99999999-9999-9999-9999-999999999999'
-        },
-        email: {
-            host: 'smtp.example.com',
-            port: 587,
-            secure: false,
-            auth: {
-                user: 'seu-email@example.com',
-                pass: 'sua-senha'
+                pathCertificado: "certificado.pfx",
+                senhaCertificado: "1234",
+                UF: "SP",
+                CPFCNPJ: "99999999999999",
             },
-            emailParams: {
-                from: '"Seu Nome" <seu-email@example.com>',
-                to: 'destinatario@example.com',
+            nfe: {
+                ambiente: 2,
+                versaoDF: "4.00",
+                idCSC: 1,
+                tokenCSC: '99999999-9999-9999-9999-999999999999'
+            },
+            email: {
+                host: 'mail.provider.com.br', // Substitua pelo host SMTP do seu provedor de e-mail
+                port: 465, // 587 para TLS ou 465 para SSL
+                secure: true, // true para 465, false para outros
+                auth: {
+                    user: 'nfe.example@email.com.br', // Seu e-mail
+                    pass: '123456' // Senha fortíssima do e-mail
+                },
+                emailParams: {
+                    from: 'Company <noreply.company@email.com>', // Remetente padrão
+                    to: 'customer.name@email.com.br', // Destinatário padrão
+                }
+            },
+            lib: {
+                connection: {
+                    timeout: 30000,
+                },
+                log: {
+                    exibirLogNoConsole: true,
+                    armazenarLogs: true,
+                    pathLogs: 'tmp/Logs'
+                },
+                useOpenSSL: false,
+                useForSchemaValidation: 'validateSchemaJsBased',
             }
-        },
-        lib: {
-            connection: {
-                timeout: 30000,
-            },
         }
-    }
-});
+    });
 ```

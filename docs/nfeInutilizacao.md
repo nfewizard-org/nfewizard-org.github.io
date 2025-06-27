@@ -33,7 +33,7 @@ const inutilizacao: InutilizacaoData = {
     xJust: 'Teste de homologação',
 }
 
-await nfewizard.NFE_Inutilizacao(inutilizacao)
+await nfeWizard.NFE_Inutilizacao(inutilizacao)
 ```
 <br>
 

@@ -1,3 +1,4 @@
+<!-- filepath: /usr/projetos/nfewizard/nfewizard-org.github.io/docs/configuracaoDeAmbiente.md -->
 # Configuração de Ambiente
 
 Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizard-io).
@@ -29,6 +30,8 @@ Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizar
 |----------|-----------|-----------|
 | `ambiente`| Define o ambiente que receberá os XML da NF-e:<br>1 = Produção<br>2 = Homologação | Obrigatório |
 | `versaoDF`        | Define a versão da NF-e (Testada apenas 4.00):<br>2.00 = Versão 2.00<br>3.00 = Versão 3.00<br>3.10 = Versão 3.10<br>4.00 = Versão 4.00 | Obrigatório |
+| `idCSC`          | ID do Código de Segurança do Contribuinte | Opcional |
+| `tokenCSC`       | Token do Código de Segurança do Contribuinte | Opcional |
 
 ### EMAIL
 
@@ -43,7 +46,7 @@ Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizar
 | `emailParams`        | Dados para envio do e-mail                                                                      | Obrigatório  |
 | `emailParams.from`   | Remetente padrão                                                                               | Obrigatório  |
 | `emailParams.to`     | Destinatário padrão                                                                             | Obrigatório  |
-| `emailParams.subject`| Assunto padrão     
+| `emailParams.subject`| Assunto padrão                                                                                 | Opcional     |
 
 ### LIB
 
@@ -52,4 +55,8 @@ Repositório do projeto [NFeWizard-io](https://github.com/nfewizard-org/nfewizar
 | `connection`             | Define configurações das requisições | Opcional |
 | `connection.timeout` | Define o tempo limite em milissegundos para as requisições HTTP feitas pela lib | Opcional, padrão: 60000 |
 | `log`             | Define configurações de log | Opcional |
-| `log.exibirLogNoConsole` | Define se os logs devem ser exibidos no console (Em desenvolvimento)| Opcional, padrão: false |
+| `log.exibirLogNoConsole` | Define se os logs devem ser exibidos no console | Opcional, padrão: false |
+| `log.armazenarLogs` | Define se os logs devem ser armazenados em arquivo | Opcional, padrão: false |
+| `log.pathLogs` | Define o diretório onde os logs serão salvos | Opcional |
+| `useOpenSSL` | Define se deve usar OpenSSL para operações criptográficas | Opcional, padrão: false |
+| `useForSchemaValidation` | Define o método de validação de schema:<br>`validateSchemaJsBased` = Validação baseada em JavaScript<br>`validateSchemaXmlLintBased` = Validação baseada em xmllint | Opcional, padrão: validateSchemaJsBased |

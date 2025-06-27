@@ -38,7 +38,7 @@ import NFeWizard from 'nfewizard-io';
 const nfewizard = new NFeWizard();
 
 // Inicializar
-await nfewizard.NFE_LoadEnvironment({
+await nfeWizard.NFE_LoadEnvironment({
     config: {
         dfe: {
             baixarXMLDistribuicao: true,
@@ -94,7 +94,7 @@ const chaveNFe: DFePorChaveNFe = {
     },
 }
 
-await nfewizard.NFE_DistribuicaoDFePorChave(chaveNFe);
+await nfeWizard.NFE_DistribuicaoDFePorChave(chaveNFe);
 ```
 
 <!-- ## Documentação

@@ -13,7 +13,7 @@
 
 
 ```typescript title="NFE_ConsultaStatusServico" linenums="1"
-await nfewizard.NFE_ConsultaProtocolo('99999999999999999999999999999999999999999999');
+await nfeWizard.NFE_ConsultaProtocolo('99999999999999999999999999999999999999999999');
 ```
 <br>
 

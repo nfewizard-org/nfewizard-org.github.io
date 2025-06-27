@@ -170,7 +170,7 @@ const evento: EventoNFe = {
     ]
 }
 
-await nfewizard.NFE_RecepcaoEvento(evento);
+await nfeWizard.NFE_RecepcaoEvento(evento);
 ```
 <br>
 Também é possível utilizar o método especifico para cada tipo de evento:
@@ -206,7 +206,7 @@ const cienciaDaOperacao: CienciaDaOperacao = {
     ]
 }
 
-await nfewizard.NFE_CienciaDaOperacao(cienciaDaOperacao);
+await nfeWizard.NFE_CienciaDaOperacao(cienciaDaOperacao);
 ```
 
 `Retorno`:
@@ -288,7 +288,7 @@ const confirmacaoDaOperacao: ConfirmacaoDaOperacao = {
     ]
 }
 
-await nfewizard.NFE_ConfirmacaoDaOperacao(confirmacaoDaOperacao);
+await nfeWizard.NFE_ConfirmacaoDaOperacao(confirmacaoDaOperacao);
 ```
 
 `Retorno`:
@@ -372,7 +372,7 @@ const cartaDeCorrecao: CartaDeCorrecao = {
     ]
 }
 
-await nfewizard.NFE_CartaDeCorrecao(cartaDeCorrecao);
+await nfeWizard.NFE_CartaDeCorrecao(cartaDeCorrecao);
 ```
 
 `Retorno`:
@@ -456,7 +456,7 @@ const cancelamento: Cancelamento = {
     ]
 }
 
-await nfewizard.NFE_Cancelamento(cancelamento);
+await nfeWizard.NFE_Cancelamento(cancelamento);
 ```
 
 `Retorno`:
@@ -538,7 +538,7 @@ const desconhecimentoDaOperacao: DesconhecimentoDaOperacao = {
     ]
 }
 
-await nfewizard.NFE_DesconhecimentoDaOperacao(desconhecimentoDaOperacao);
+await nfeWizard.NFE_DesconhecimentoDaOperacao(desconhecimentoDaOperacao);
 ```
 
 `Retorno`:
@@ -621,7 +621,7 @@ const operacaoNaoRealizada: OperacaoNaoRealizada = {
     ]
 }
 
-await nfewizard.NFE_OperacaoNaoRealizada(operacaoNaoRealizada);
+await nfeWizard.NFE_OperacaoNaoRealizada(operacaoNaoRealizada);
 ```
 
 `Retorno`:
@@ -717,7 +717,7 @@ const epec: EPEC = {
     ]
 }
 
-await nfewizard.NFE_EventoPrevioDeEmissaoEmContingencia(epec);
+await nfeWizard.NFE_EventoPrevioDeEmissaoEmContingencia(epec);
 ```
 <br>
 `Retorno`:

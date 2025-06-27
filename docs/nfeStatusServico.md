@@ -7,7 +7,7 @@
 <br>
 
 ```typescript title="NFE_ConsultaStatusServico" linenums="1"
-await nfewizard.NFE_ConsultaStatusServico();
+await nfeWizard.NFE_ConsultaStatusServico();
 ```
 <br>
 

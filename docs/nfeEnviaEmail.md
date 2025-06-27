@@ -105,8 +105,8 @@ const messageExample = `
 </html>
 `;
 
-nfewizard.NFE_EnviaEmail({
-    messageExample,
+nfeWizard.NFE_EnviaEmail({
+    message: messageExample,
     subject: 'Envio de DANFE e NF-e',
     attachments: [
         {
