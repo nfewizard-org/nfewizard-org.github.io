@@ -557,6 +557,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../nfceAutorizacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFCeAutorizacao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../nfeGerarDanfe/" class="md-nav__link">
         
   
@@ -614,6 +635,7 @@
                   
 
 
+<!-- filepath: /usr/projetos/nfewizard/nfewizard-org.github.io/docs/configuracaoDeAmbiente.md -->
 <h1 id="configuracao-de-ambiente">Configuração de Ambiente</h1>
 <p>Repositório do projeto <a href="https://github.com/nfewizard-org/nfewizard-io">NFeWizard-io</a>.</p>
 <h3 id="dfe">DFE</h3>
@@ -728,6 +750,16 @@
 <td>Define a versão da NF-e (Testada apenas 4.00):<br>2.00 = Versão 2.00<br>3.00 = Versão 3.00<br>3.10 = Versão 3.10<br>4.00 = Versão 4.00</td>
 <td>Obrigatório</td>
 </tr>
+<tr>
+<td><code>idCSC</code></td>
+<td>ID do Código de Segurança do Contribuinte</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td><code>tokenCSC</code></td>
+<td>Token do Código de Segurança do Contribuinte</td>
+<td>Opcional</td>
+</tr>
 </tbody>
 </table>
 <h3 id="email">EMAIL</h3>
@@ -788,7 +820,7 @@
 <tr>
 <td><code>emailParams.subject</code></td>
 <td>Assunto padrão</td>
-<td></td>
+<td>Opcional</td>
 </tr>
 </tbody>
 </table>
@@ -819,8 +851,28 @@
 </tr>
 <tr>
 <td><code>log.exibirLogNoConsole</code></td>
-<td>Define se os logs devem ser exibidos no console (Em desenvolvimento)</td>
+<td>Define se os logs devem ser exibidos no console</td>
 <td>Opcional, padrão: false</td>
+</tr>
+<tr>
+<td><code>log.armazenarLogs</code></td>
+<td>Define se os logs devem ser armazenados em arquivo</td>
+<td>Opcional, padrão: false</td>
+</tr>
+<tr>
+<td><code>log.pathLogs</code></td>
+<td>Define o diretório onde os logs serão salvos</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td><code>useOpenSSL</code></td>
+<td>Define se deve usar OpenSSL para operações criptográficas</td>
+<td>Opcional, padrão: false</td>
+</tr>
+<tr>
+<td><code>useForSchemaValidation</code></td>
+<td>Define o método de validação de schema:<br><code>validateSchemaJsBased</code> = Validação baseada em JavaScript<br><code>validateSchemaXmlLintBased</code> = Validação baseada em xmllint</td>
+<td>Opcional, padrão: validateSchemaJsBased</td>
 </tr>
 </tbody>
 </table>

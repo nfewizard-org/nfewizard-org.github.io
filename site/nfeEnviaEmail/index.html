@@ -481,6 +481,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../nfceAutorizacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFCeAutorizacao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../nfeGerarDanfe/" class="md-nav__link">
         
   
@@ -666,7 +687,7 @@
 <span class="normal"><a href="#__codelineno-0-110">110</a></span>
 <span class="normal"><a href="#__codelineno-0-111">111</a></span>
 <span class="normal"><a href="#__codelineno-0-112">112</a></span>
-<span class="normal"><a href="#__codelineno-0-113">113</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">NFeWizard-io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NFeWizard-io</span><span class="p">();</span>
+<span class="normal"><a href="#__codelineno-0-113">113</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nfewizard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NFeWizard</span><span class="p">();</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">messageExample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sb">&lt;!DOCTYPE html&gt;</span>
@@ -765,8 +786,8 @@
 <a id="__codelineno-0-97" name="__codelineno-0-97"></a><span class="sb">&lt;/html&gt;</span>
 <a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="sb">`</span><span class="p">;</span>
 <a id="__codelineno-0-99" name="__codelineno-0-99"></a>
-<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="nx">NFeWizard-io</span><span class="p">.</span><span class="nx">NFE_EnviaEmail</span><span class="p">({</span>
-<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">    </span><span class="nx">messageExample</span><span class="p">,</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="nx">nfeWizard</span><span class="p">.</span><span class="nx">NFE_EnviaEmail</span><span class="p">({</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">messageExample</span><span class="p">,</span>
 <a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="w">    </span><span class="nx">subject</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Envio de DANFE e NF-e&#39;</span><span class="p">,</span>
 <a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="w">    </span><span class="nx">attachments</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="w">        </span><span class="p">{</span>
