@@ -46,16 +46,16 @@ await nfeWizard.NFE_LoadEnvironment({
                 tokenCSC: '99999999-9999-9999-9999-999999999999'
             },
             email: {
-                host: 'mail.provider.com.br', // Substitua pelo host SMTP do seu provedor de e-mail
-                port: 465, // 587 para TLS ou 465 para SSL
-                secure: true, // true para 465, false para outros
+                host: 'mail.provider.com.br',
+                port: 465,
+                secure: true, 
                 auth: {
-                    user: 'nfe.example@email.com.br', // Seu e-mail
-                    pass: '123456' // Senha fortíssima do e-mail
+                    user: 'nfe.example@email.com.br',
+                    pass: '123456' 
                 },
                 emailParams: {
-                    from: 'Company <noreply.company@email.com>', // Remetente padrão
-                    to: 'customer.name@email.com.br', // Destinatário padrão
+                    from: 'Company <noreply.company@email.com>',
+                    to: 'customer.name@email.com.br',
                 }
             },
             lib: {
